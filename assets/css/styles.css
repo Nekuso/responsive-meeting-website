@@ -7,9 +7,14 @@
     --button-color: #6A9FD6;
 
     --h1-m-size: 1rem;
-    --h3-m-size: .7rem;
-    --h5-m-size: .6rem;
-    --p-m-size: .5rem;
+    --h3-m-size: .8rem;
+    --h5-m-size: .7rem;
+    --p-m-size: .6rem;
+
+    --h1-mx-size: 1.5rem;
+    --h3-mx-size: .9rem;
+    --h5-mx-size: .8rem;
+    --p-mx-size: .8rem;
 
     --h1-l-size: 2rem;
     --h3-l-size: 1rem;
@@ -48,8 +53,8 @@ h3,h4,h5 {
 }
 
 section {
-    max-width: 400px;
-    margin: 2rem auto;
+    max-width: 90vw;
+    margin: 1.6rem auto;
 }
 
 img {
@@ -74,7 +79,7 @@ img {
 
 .nav__logo a {
     position: relative;
-    z-index: 99;
+    z-index: 100;
     color: var(--primary-color);
 }
 
@@ -90,6 +95,11 @@ img {
     color: var(--secondary-color);
     font-size: 1rem;
     font-weight: 500;
+    transition: .3s ease-in-out; 
+}
+
+.nav__list li a:hover {
+    color: var(--button-color);
 }
 
 .nav__buttons {
@@ -156,7 +166,7 @@ img {
 
 .nav__hamburger.is-active span:nth-child(1){
     transform: translate(0px, 10px) rotate(45deg);
-    background:var(--button-color);
+    background: white;
 }
 .nav__hamburger.is-active span:nth-child(2){
     opacity: 0;
@@ -164,7 +174,7 @@ img {
 }
 .nav__hamburger.is-active span:nth-child(3){
     transform: translate(0px, -8px) rotate(-45deg);
-    background:var(--button-color);
+    background: white;
 }
 
 /* HERO SECTION */
@@ -203,7 +213,7 @@ input {
     border-radius: 2rem;
     border: none;
     margin: 0 0 0 1rem;
-    z-index: -1;
+    z-index: 1;
 }
 
 input:focus {
@@ -274,7 +284,13 @@ input:focus {
     margin: 0;
     font-size: var(--p-m-size);
     color: var(--primary-color);
+    transition: .4s ease-in-out;
 }
+
+.feature a:hover {
+    font-size: .7rem;
+}
+
 
 /* SOLUTION SECTION */
 .solution__container {
@@ -293,15 +309,15 @@ input:focus {
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content: center;
-    margin: 0 3rem;
-    
+    column-gap: 1rem;
+    margin: 0 2rem;
 }
 
 .card {
     background: white;
     border-radius: 2rem;
-    padding: .5rem 1rem;
-    margin: 1rem .6rem;
+    padding: .5rem 0;
+    margin: 1rem 0;
     transition: .4s  ease-in-out;
     cursor: pointer;
 }
@@ -322,7 +338,8 @@ input:focus {
 
 .card p {
     font-weight: 500;
-    font-size: var(--p-m-size);
+    font-size: var(--h3-m-size);
+    padding: 0;
 }
 
 .solution__container h1 {
@@ -367,7 +384,7 @@ input:focus {
 }
 
 .feedback__tag {
-    margin: 0 1rem;
+    margin: 0 .6rem;
 }
 
 /* TRIAL SECTION */
@@ -388,7 +405,7 @@ input:focus {
 }
 
 .trial a{
-    font-size: .4rem;
+    font-size: .5rem;
     font: weight 700;
     color: white;
     background: var(--button-color);
@@ -459,7 +476,6 @@ input:focus {
     display: inline-flex;
     align-items: center;
     background: white;
-    
 }
 
 .footer__search i {
@@ -471,6 +487,7 @@ input:focus {
     margin: 0;
     font-size: .5rem;
     padding: 0.2rem;
+    width: 100px;
     color: var(--button-color);
 }
 
@@ -547,10 +564,175 @@ hr {
 
 @media screen and (min-width: 768px) {
     section {
-        max-width:600px;
-        margin: 4rem auto;
+        max-width:80vw;
+        margin: 3rem auto;
+    }
+
+    .nav__menu {
+        display: flex;
+    }
+
+    .nav__list li {
+        margin-right: 1rem;
+    }
+
+    .nav__list li a {
+        font-size: .7rem;
+    }
+
+    .nav__buttons li a {
+        font-size: .6rem
     }
     
+    /* HERO SECTION */
+    .hero__text h1 {
+        font-size: var(--h1-mx-size);
+    }
+
+    .hero__text p {
+        font-size: var(--p-mx-size);
+    }
+
+    input {
+        font-size: var(--p-mx-size);
+        width: 12rem;
+    }
+
+    .meeting__button {
+        font-size: 1rem;
+        width: 10rem;
+        padding: .6rem 1rem;
+    }
+
+    .meeting__button i {
+        font-size: 1.2rem;
+    }
+
+    /* BRAND SECTION */
+    .brands__container h1 {
+        font-size: var(--h1-mx-size);
+        margin: 0;
+    }
+
+    .brand__collection {
+        column-gap: 3rem;
+        grid-template-columns: 13% 13% 13% 13% 13%;
+    }
+
+    /* FEATURES SECTION */
+    .feature{
+        margin: 0;
+    }
+
+    .feature h1 {
+        font-size: var(--h1-mx-size);
+    }
+
+    .feature p {
+        font-size: var(--p-mx-size);
+    }
+
+    .feature a {
+        font-size: var(--p-mx-size);
+    }
+
+    /* SOLUTION SECTION */
+    .solution__container h1 {
+        font-size: var(--h1-mx-size);
+    }
+
+    .card__container {
+        display: flex;
+    }
+
+    .card {
+        padding: .5rem .3rem;
+    }
+    
+    .card h3 {
+        font-size: var(--h3-mx-size);
+    }
+
+    .card p {
+        font-size: .6rem;
+    }
+
+    /* COSTUMER SECTION */
+    .costumers__container h1{
+        font-size: var(--h1-mx-size);
+    }
+
+    .feedback h3 {
+        font-size: var(--h3-mx-size);
+    }
+
+    .feedback h5 {
+        font-size: var(--h5-mx-size);
+    }
+
+    .feedback p {
+        font-size: var(--p-mx-size);
+        padding-right: 2rem;
+    }
+
+    /* TRIAL SECTION*/
+    .trial__text h1 {
+        font-size: var(--h1-mx-size);
+    }
+
+    .trial__text p {
+        font-size: var(--p-mx-size);
+        margin-bottom: 1rem;
+    }
+
+    .trial a {
+        margin: 2rem 0;
+        font-size: 1rem;
+    }
+
+    /* FOOTER SECTION */
+    .footer__upper, .footer__lower, hr {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    .footer__blog p {
+        font-size: var(--p-mx-size);
+    }
+
+    .footer__blog i {
+        font-size: .9rem;
+    }
+
+    .footer__search i {
+        font-size: 1.5rem;
+    }
+    .footer__search input {
+        font-size: .8rem;
+        width: 150px;
+    }
+
+    .footer__brand a h1 {
+        font-size: var(--h1-mx-size);
+    }
+
+    .footer__brand p {
+        font-size: .5rem;
+    }
+
+    .footer__links ul li {
+        font-size: .6rem;
+    }
+
+    .footer__links ul {
+        margin-top: 1rem;
+    }
+
+    .footer__container .footer__copyright{
+        font-size: .6rem;
+        padding: 1rem;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -560,9 +742,11 @@ hr {
     
     .nav__logo.is-active a h1{
         color: white;
+        transition: 1s ease-in-out;
     }
     
     .nav__menu {
+        justify-content: center;
         top: 0;
         left: 100%;
         right: 0;
@@ -570,6 +754,7 @@ hr {
         position: fixed;
         background: linear-gradient(to right bottom, #001b48, #012554, #022f61, #023a6d, #02457a);
         transition: .4s ease-in-out;
+        z-index: 99;
     }
     
     .nav__list{
@@ -590,6 +775,11 @@ hr {
     
     .nav__list li a {
         color: white;
+        transition: .3s ease-in-out;
+    }
+
+    .nav__list li a:hover {
+        color: #6A9FD6;
     }
 
     .nav__buttons {
@@ -598,14 +788,27 @@ hr {
 
     .nav__hamburger{
         display: inline;
+        z-index: 99;
     }
 
 }
 
 @media screen and (min-width: 1024px) {
     section {
-        max-width: 1080px;
+        max-width: 90vh;
         margin: 2rem auto;
+    }
+
+    .nav__list li {
+        margin-right: 2rem;
+    }
+
+    .nav__list li a {
+        font-size: .8rem;
+    }
+
+    .nav__buttons li a {
+        font-size: .7rem
     }
 
     /* HERO SECTION */
@@ -674,7 +877,7 @@ hr {
     }
     
     .card h3 {
-        font-size: var(--h3-l-size);
+        font-size: var(--h3-mx-size);
     }
 
     .card p {
@@ -687,11 +890,11 @@ hr {
     }
 
     .feedback h3 {
-        font-size: var(--h3-l-size);
+        font-size: var(--h3-mx-size);
     }
 
     .feedback h5 {
-        font-size: var(--h5-l-size);
+        font-size: var(--h5-mx-size);
     }
 
     .feedback p {
@@ -733,6 +936,7 @@ hr {
     }
     .footer__search input {
         font-size: .8rem;
+        width: 150px;
     }
 
     .footer__brand a h1 {
@@ -756,5 +960,10 @@ hr {
         padding: 1rem;
     }
 
+}
 
+@media screen and (min-width: 1440px){
+    section {
+        max-width: 1080px;
+    }
 }
