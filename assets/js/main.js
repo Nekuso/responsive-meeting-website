@@ -11,10 +11,8 @@ hamburger.addEventListener('click', function() {
 });
 
 // Dark Mode Toggle
-const darkmode = document.querySelector('.dark__mode__button');
-const body = document.body;
+const darkmode = document.querySelector('.dark__mode__button'), body= document.querySelector('.page');
 
-darkmode.addEventListener('click', function() {
-    darkmode.classList.toggle('is-dark');
+darkmode.onclick = ()=> {
     body.classList.toggle('is-dark');
-});
+}

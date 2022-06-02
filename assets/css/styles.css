@@ -2,6 +2,7 @@
 
 /* Variables */
 :root {
+    --primary--bg-color: white;
     --primary-color: #2B6FB4;
     --secondary-color: #122E4A;
     --button-color: #6A9FD6;
@@ -32,9 +33,11 @@ html {
     scroll-behavior: smooth;
 }
 
+
 body {
     margin: 0;
     transition: .4s ease-in-out;
+    background: var(--primary--bg-color);
 }
 
 ul,li,a {
@@ -68,7 +71,7 @@ img {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: .4rem;
+    padding: .0;
 }
 
 .nav__container.is-active {
@@ -131,7 +134,7 @@ img {
 
 .nav__buttons li .signUp:hover {
     color: var(--button-color);
-    background: white;
+    background: rgba(255, 255, 255, 0);
 }
 
 .nav__hamburger{
@@ -199,6 +202,7 @@ img {
     cursor: pointer;
     padding: 0;
     margin-right: 1rem;
+    transition: .4s ease-in-out;
 }
 
 /* DARK MODE */
@@ -207,12 +211,38 @@ img {
 }
 
 .is-dark {
-    background: #2F3C53;    
-    transition: .4s ease-in-out;
+    background: #122E4A;
 }
 
-.is-dark-text {
+.is-dark h1, .is-dark h3, .is-dark h5, .is-dark p, .is-dark .feature a, .is-dark .nav__list li a, .is-dark .dark__mode__button{
     color: white;
+}
+
+.is-dark .nav__buttons li:nth-child(1) a{
+    color: white;
+    border: 1px solid white;
+}
+
+.is-dark .nav__buttons a:hover {
+    border: 1px solid white;
+    color: white;
+}
+
+.is-dark .nav__hamburger span {
+    background: white;
+}
+
+.is-dark .card h3, .is-dark .card p{
+    color: var(--secondary-color);
+}
+
+.is-dark .trial a:hover {
+    border: 1px solid white;
+    color: white;
+}
+
+.is-dark .footer__container {
+    background: #122E4A;
 }
 
 /* HERO SECTION */
@@ -238,15 +268,21 @@ img {
 
 .meeting__container {
     display: inline-flex;
+    background: white;
     align-items: center;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 2rem;
     margin: 0;
+    transition: .4s  ease-in-out;
+}
+
+.meeting__container:hover {
+    transform: scale(103%);
 }
 
 input {
-    font-size: var(--p-m-size);
-    width: 5.5rem;
+    font-size: .45rem;
+    width: 5rem;
     padding: .1rem;
     border-radius: 2rem;
     border: none;
@@ -326,7 +362,7 @@ input:focus {
 }
 
 .feature a:hover {
-    font-size: .7rem;
+    font-size: .9rem;
 }
 
 
@@ -455,7 +491,7 @@ input:focus {
 
 .trial a:hover {
     color: var(--button-color);
-    background: white;
+    background: rgba(255, 255, 255, 0);
 }
 
 .trial__button {
@@ -524,7 +560,7 @@ input:focus {
 .footer__search input {
     margin: 0;
     font-size: .5rem;
-    padding: 0.2rem;
+    padding: 0.5rem;
     width: 100px;
     color: var(--button-color);
 }
@@ -621,6 +657,10 @@ hr {
     .nav__buttons li a {
         font-size: .6rem
     }
+
+    .dark__mode__button {
+        color: var(--primary-color);
+    }
     
     /* HERO SECTION */
     .hero__text h1 {
@@ -633,17 +673,18 @@ hr {
 
     input {
         font-size: var(--p-mx-size);
-        width: 12rem;
+        width: 10rem;
     }
 
     .meeting__button {
-        font-size: 1rem;
-        width: 10rem;
+        font-size: .6rem;
+        width: 7.5rem;
         padding: .6rem 1rem;
+        transition: .4s ease-in-out;
     }
 
     .meeting__button i {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     /* BRAND SECTION */
@@ -661,6 +702,7 @@ hr {
     .feature{
         margin: 0;
     }
+    
 
     .feature h1 {
         font-size: var(--h1-mx-size);
@@ -672,6 +714,10 @@ hr {
 
     .feature a {
         font-size: var(--p-mx-size);
+    }
+    
+    .feature a:hover {
+        font-size: 1.1rem;
     }
 
     /* SOLUTION SECTION */
@@ -786,12 +832,12 @@ hr {
     .nav__menu {
         justify-content: center;
         top: 0;
-        left: 100%;
+        left: 120%;
         right: 0;
         bottom: 0;
         position: fixed;
         background: linear-gradient(to right bottom, #001b48, #012554, #022f61, #023a6d, #02457a);
-        transition: .4s ease-in-out;
+        transition: .6s ease-in-out;
         z-index: 99;
     }
     
@@ -999,9 +1045,3 @@ hr {
     }
 
 }
-/* 
-@media screen and (min-width: 1440px){
-    section {
-        max-width: 1080px;
-    }
-} */
