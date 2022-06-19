@@ -1,6 +1,6 @@
 # Responsive meeting Website📹
 
-- Live Site URL: [https://nekuso.github.io/responsive-meeting-website/assets/pages/login.html](https://nekuso.github.io/responsive-meeting-website/assets/pages/login.html)
+- Live Site URL: [https://nekuso.github.io/responsive-meeting-website/](https://nekuso.github.io/responsive-meeting-website/)
 
 ### Responsive meeting Website
 - Responsive meeting Website Using HTML CSS & JavaScript
