@@ -33,7 +33,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     display: block;
     align-items: center;
@@ -159,7 +158,6 @@ hr {
 .a__link {
     color: var(--button-color);
 }
-
 
 
 /* MEDIA QUERIES */
